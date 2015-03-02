@@ -1,0 +1,17 @@
+disp('Give the input 1.Example of if-else 2.Example of for loop 3.Example of while loop');
+result = input('Enter Value of result')
+if result==1 
+    disp('THIS IS IF-ELSE');
+elseif result==2
+    for i=1:10
+        disp('FOR LOOP');
+    end
+elseif result==3
+    while result<=3
+        disp('WHILE LOOP');
+        result=result-1;
+    end
+    fout=
+else
+    disp('INVALID CHOICE');
+end 
