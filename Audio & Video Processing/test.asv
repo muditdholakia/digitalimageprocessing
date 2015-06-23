@@ -1,0 +1,5 @@
+
+FF = computeAllStatistics('F:\Dissertation\Scene detection\video\3idoits1.wav', 1, 1);
+ 
+ 
+  

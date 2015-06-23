@@ -1,0 +1,85 @@
+clc;
+% [video audio] =mmread('C:\Users\Tushar\Desktop\result\shot717.wmv',[]) ;
+% [video1 audio1] =mmread('C:\Users\Tushar\Desktop\result\shot627.wmv',[]) ;
+%for song 
+
+[video audio] =mmread('C:\Users\Tushar\Desktop\result\rockstar\shot8996.wmv',[]) ;
+[video11 audio11] =mmread('C:\Users\Tushar\Desktop\result\rockstar\shot8996.wmv',[]) ;
+[video12 audio12] =mmread('C:\Users\Tushar\Desktop\result\rockstar\shot8996.wmv',[]) ;
+[video13 audio13] =mmread('C:\Users\Tushar\Desktop\result\rockstar\shot8996.wmv',[]) ;
+[video14 audio14] =mmread('C:\Users\Tushar\Desktop\result\rockstar\shot8996.wmv',[]) ;
+
+
+%for drama
+[video1 audio1] =mmread('C:\Users\Tushar\Desktop\result\rockstar\shot9135.wmv',[]) ;
+[video21 audio21] =mmread('C:\Users\Tushar\Desktop\result\rockstar\shot9135.wmv',[]) ;
+[video22 audio22] =mmread('C:\Users\Tushar\Desktop\result\rockstar\shot9135.wmv',[]) ;
+[video23 audio23] =mmread('C:\Users\Tushar\Desktop\result\rockstar\shot9135.wmv',[]) ;
+[video24 audio24] =mmread('C:\Users\Tushar\Desktop\result\rockstar\shot9135.wmv',[]) ;
+
+
+a = sum(sum(abs(audio.data)));
+disp(a);
+
+a1 = sum(sum(abs(audio1.data)));
+disp(a1);
+
+figure(1);subplot(2,1,1);plot(audio14.data(:,1));
+figure(3);subplot(2,1,1);imhist(audio14.data(:,1))
+figure(3);subplot(2,1,2);imhist(audio1.data(:,1));
+figure(1);subplot(2,1,2);plot(audio1.data(:,1));
+figure(2);subplot(2,1,1);plot(audio14.data(:,2));
+figure(2);subplot(2,1,2);plot(audio1.data(:,2));
+
+
+f1 = audio.data(:,1)>=0.05;
+ f11(1,1)= sum(f1~=0);
+ f2 = audio14.data(:,2)>=0.05;
+ f22(1,2) = sum(f2~=0);
+ 
+ f1 = audio11.data(:,1)>=0.05;
+ f11(2,1)= sum(f1~=0);
+ f2 = audio11.data(:,2)>=0.05;
+ f22(2,2) = sum(f2~=0);
+ 
+  f1 = audio12.data(:,1)>=0.05;
+ f11(3,1)= sum(f1~=0);
+ f2 = audio12.data(:,2)>=0.05;
+ f22(4,2) = sum(f2~=0);
+ 
+ 
+  f1 = audio13.data(:,1)>=0.05;
+ f11(3,1)= sum(f1~=0);
+ f2 = audio13.data(:,2)>=0.05;
+ f22(3,2) = sum(f2~=0);
+ 
+  f1 = audio14.data(:,1)>=0.05;
+ f11(4,1)= sum(f1~=0);
+ f2 = audio14.data(:,2)>=0.05;
+ f22(4,2) = sum(f2~=0);
+ 
+ 
+ s1 = audio1.data(:,1)>=0.05;
+ s11(1,1)= sum(s1~=0);
+ s2 = audio1.data(:,2)>=0.05;
+ s22(1,2) = sum(s2~=0);
+ 
+ s1 = audio21.data(:,1)>=0.05;
+ s11(2,1)= sum(s1~=0);
+ s2 = audio21.data(:,2)>=0.05;
+ s22(2,2) = sum(s2~=0);
+ 
+ s1 = audio22.data(:,1)>=0.05;
+ s11(3,1)= sum(s1~=0);
+ s2 = audio22.data(:,2)>=0.05;
+ s22(3,2) = sum(s2~=0);
+ 
+ s1 = audio23.data(:,1)>=0.05;
+ s11(4,1)= sum(s1~=0);
+ s2 = audio23.data(:,2)>=0.05;
+ s22(4,2) = sum(s2~=0);
+ 
+ s1 = audio24.data(:,1)>=0.05;
+ s11(5,1)= sum(s1~=0);
+ s2 = audio1.data(:,2)>=0.05;
+ s22(1,2) = sum(s2~=0);
